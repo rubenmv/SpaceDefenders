@@ -1,0 +1,15 @@
+# Blender v2.69 (sub 0) OBJ File: 'bombardero_retocada.blend'
+# www.blender.org
+mtllib shadow_bomber.mtl
+o Plane
+v -7.489534 -3.596410 -7.489534
+v 7.489534 -3.596410 -7.489534
+v -7.489534 -3.596410 7.489534
+v 7.489534 -3.596410 7.489534
+vt 1.000000 1.000000
+vt 0.000000 1.000000
+vt 0.000000 0.000000
+vt 1.000000 0.000000
+usemtl Material
+s off
+f 2/1 1/2 3/3 4/4

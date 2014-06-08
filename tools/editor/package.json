@@ -1,0 +1,12 @@
+{
+  "name": "Space Defenders Editor",
+  "main": "app/index.html",
+  "version": "0.0.1",
+  "window": {
+    "title": "Space Defenders Editor",
+    "width": 800,
+    "height": 600,
+    "min_width": 800,
+    "min_height": 600
+  }
+}

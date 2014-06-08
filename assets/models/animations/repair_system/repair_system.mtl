@@ -1,0 +1,12 @@
+# Blender MTL File: 'repair_system.blend'
+# Material Count: 1
+
+newmtl Material.001
+Ns 100
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ni 1.000000
+d 0.000000
+illum 0
+map_Kd bullet_blue.png

@@ -1,0 +1,1 @@
+Este shader se utiliza cuando se renderiza la escena a textura. Simplemente pone la textura en un quad que ocupa la ventana.

@@ -1,0 +1,40 @@
+#pragma once
+#include "raknet/MessageIdentifiers.h"
+
+enum ClientMessages
+{
+	ID_CLIENT_START_GAME = ID_USER_PACKET_ENUM, //Cambiarle el nombre cuando se necesite por primera vez
+	ID_CLIENT_PLAYER_TOGGLE_READY,
+
+};
+
+enum ServerMessages
+{
+	ID_SERVER_PLAYER_LIST = 200,
+	ID_SERVER_STRING_MESSAGE,
+	ID_SERVER_GAME_STARTING,
+	ID_CLIENT_PLAYER_TOGGLE_BOMBER,
+	ID_CLIENT_PLAYER_TOGGLE_FIGHTER,
+	ID_CLIENT_PLAYER_TOGGLE_BATTLESHIP,
+	ID_CLIENT_PLAYER_TOGGLE_ENGINEER,
+	ID_GET_CHARACTER,
+	ID_SERVER_YOUR_CHARACTER,
+	ID_SERVER_GIVE_EXPERIENCE
+	
+};
+
+//De clientes o de servidor
+enum GlobalMessages
+{
+	//De referencia para saber a partir de cual son globales
+	ID_GLOBAL_FIRST = 230, 
+	ID_GLOBAL_GAMEOBJECT_MESSAGE,
+	ID_CREATE_SKILL,
+	ID_NEXT_WAVE,
+	ID_GAME_OVER,
+	ID_SET_WALL,
+	ID_SET_EMPTY
+};
+
+
+

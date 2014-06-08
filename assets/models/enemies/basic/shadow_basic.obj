@@ -1,0 +1,15 @@
+# Blender v2.69 (sub 0) OBJ File: 'enemy_basic.blend'
+# www.blender.org
+mtllib shadow_basic.mtl
+o Plane
+v -5.000760 -3.400755 5.000760
+v -5.000760 -3.400755 -5.000760
+v 5.000760 -3.400755 5.000760
+v 5.000760 -3.400755 -5.000760
+vt 0.000000 1.000000
+vt 0.000000 0.000000
+vt 1.000000 0.000000
+vt 1.000000 1.000000
+usemtl Material
+s off
+f 2/1 1/2 3/3 4/4

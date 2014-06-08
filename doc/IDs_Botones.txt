@@ -1,0 +1,34 @@
+IDs de botones
+--------------
+
+// Ids 50 a 99 son botones comunes
+// Ids 100 a 199 son para el menu princial
+// Ids 200 a 249 son para el server broswser
+// Ids 250 para el lobby
+// Ids 400 para dentro del juego
+
+50 : EXIT
+51 : BACK
+
+100-1(99) : DISCONNECT
+100 : EXIT
+101 : GAME OBJECT
+102 : COLLISIONS
+103 : PATHFINDING
+104 : STEERING
+106 : WAVES
+
+107 : TESTS
+
+105 : SERVER BROWSER | RECONNECT
+200 : REFRESH
+202 : JOIN
+203 : CREATE GAME
+204 : LAUNCH SERVER
+
+300 : DISCONNECT
+301 : START
+
+350 : REINICIAR MAPA
+
+600 : TABLE SERVERS

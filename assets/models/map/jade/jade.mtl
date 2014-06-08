@@ -1,0 +1,16 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 15.02.2014 11:49:31
+
+newmtl 07___Default
+	Ns 90.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 1 1 1
+	Kd 1 1 1
+	Ks 0 0 0
+	Ke 0 0 0
+	map_Ka jade.png
+	map_Kd jade.png

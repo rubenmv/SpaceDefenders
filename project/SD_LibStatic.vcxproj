@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SD_LibStatic</RootNamespace>
+    <ProjectGuid>{A5E8FCE0-D7EB-4D07-938A-22A7B21F381A}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\lib\</OutDir>
+    <IntDir>$(SolutionDir)\build\debug\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)_debug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\lib\</OutDir>
+    <IntDir>$(SolutionDir)\build\release\$(ProjectName)\</IntDir>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(SolutionDir)\lib\Irrlicht.lib;$(SolutionDir)\lib\RakNet.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(SolutionDir)\lib\sfml-graphics-d.lib;$(SolutionDir)\lib\sfml-main-d.lib;$(SolutionDir)\lib\sfml-system-d.lib;$(SolutionDir)\lib\sfml-window-d.lib;$(SolutionDir)\lib\glew32.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+    <BuildLog>
+      <Path>$(IntDir)\$(MSBuildProjectName)_debug.log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\common\AIEngine.cpp" />
+    <ClCompile Include="..\src\common\AudioManager.cpp" />
+    <ClCompile Include="..\src\common\ComponentAIBomber.cpp" />
+    <ClCompile Include="..\src\common\ComponentAIDefender.cpp" />
+    <ClCompile Include="..\src\common\ComponentAnimationArea.cpp" />
+    <ClCompile Include="..\src\common\ComponentConstruction.cpp" />
+    <ClCompile Include="..\src\common\ComponentCreateDebris.cpp" />
+    <ClCompile Include="..\src\common\ComponentCreatingWall.cpp" />
+    <ClCompile Include="..\src\common\ComponentDebris.cpp" />
+    <ClCompile Include="..\src\common\ComponentEndGame.cpp" />
+    <ClCompile Include="..\src\common\ComponentEnergyWall.cpp" />
+    <ClCompile Include="..\src\common\ComponentGraphicsShield.cpp" />
+    <ClCompile Include="..\src\common\ComponentGraphicsShadow.cpp" />
+    <ClCompile Include="..\src\common\ComponentGraphicsStatics.cpp" />
+    <ClCompile Include="..\src\common\ComponentRemoteMessage.cpp" />
+    <ClCompile Include="..\src\common\ComponentRepairSystem.cpp" />
+    <ClCompile Include="..\src\common\ComponentSkill.cpp" />
+    <ClCompile Include="..\src\common\ComponentSound.cpp" />
+    <ClCompile Include="..\src\common\ComponentWallConstruction.cpp" />
+    <ClCompile Include="..\src\common\CScreenQuadSceneNode.cpp" />
+    <ClCompile Include="..\src\common\EntityLight.cpp" />
+    <ClCompile Include="..\src\common\FXEngineIrrlicht.cpp" />
+    <ClCompile Include="..\src\common\FXEngineTAG.cpp" />
+    <ClCompile Include="..\src\common\GUIButton.cpp" />
+    <ClCompile Include="..\src\common\GUICheckbox.cpp" />
+    <ClCompile Include="..\src\common\GUISprite.cpp" />
+    <ClCompile Include="..\src\common\GUITable.cpp" />
+    <ClCompile Include="..\src\common\GUIText.cpp" />
+    <ClCompile Include="..\src\common\MapManager.cpp" />
+    <ClCompile Include="..\src\common\AIFlocking.cpp" />
+    <ClCompile Include="..\src\common\Clock.cpp" />
+    <ClCompile Include="..\src\common\CollisionManager.cpp" />
+    <ClCompile Include="..\src\common\ComponentAIEnemy.cpp" />
+    <ClCompile Include="..\src\common\ComponentAIEnemyDumb.cpp" />
+    <ClCompile Include="..\src\common\ComponentAIMine.cpp" />
+    <ClCompile Include="..\src\common\ComponentAutoDestroy.cpp" />
+    <ClCompile Include="..\src\common\ComponentBehaviour.cpp" />
+    <ClCompile Include="..\src\common\ComponentBulletLauncher.cpp" />
+    <ClCompile Include="..\src\common\ComponentDebugPathfinding.cpp" />
+    <ClCompile Include="..\src\common\ComponentAIFury.cpp" />
+    <ClCompile Include="..\src\common\ComponentGiveExp.cpp" />
+    <ClCompile Include="..\src\common\ComponentHUD.cpp" />
+    <ClCompile Include="..\src\common\ComponentInputCamera.cpp" />
+    <ClCompile Include="..\src\common\ComponentInputObstacle.cpp" />
+    <ClCompile Include="..\src\common\ComponentInputTarget.cpp" />
+    <ClCompile Include="..\src\common\ComponentAITurret.cpp" />
+    <ClCompile Include="..\src\common\ComponentCamera.cpp" />
+    <ClCompile Include="..\src\common\ComponentCollider.cpp" />
+    <ClCompile Include="..\src\common\ComponentDebugGameObject.cpp" />
+    <ClCompile Include="..\src\common\ComponentAIProjectile.cpp" />
+    <ClCompile Include="..\src\common\ComponentExplosionDamage.cpp" />
+    <ClCompile Include="..\src\common\ComponentGraphics.cpp" />
+    <ClCompile Include="..\src\common\ComponentHealth.cpp" />
+    <ClCompile Include="..\src\common\ComponentInput.cpp" />
+    <ClCompile Include="..\src\common\ComponentInventory.cpp" />
+    <ClCompile Include="..\src\common\ComponentJade.cpp" />
+    <ClCompile Include="..\src\common\ComponentLevelExp.cpp" />
+    <ClCompile Include="..\src\common\ComponentMinesGenerator.cpp" />
+    <ClCompile Include="..\src\common\ComponentMiniMap.cpp" />
+    <ClCompile Include="..\src\common\ComponentMovement.cpp" />
+    <ClCompile Include="..\src\common\ComponentPathfinder.cpp" />
+    <ClCompile Include="..\src\common\ComponentProjectileLauncher.cpp" />
+    <ClCompile Include="..\src\common\ComponentRandomMovement.cpp" />
+    <ClCompile Include="..\src\common\ComponentMovementInterpolation.cpp" />
+    <ClCompile Include="..\src\common\ComponentRay.cpp" />
+    <ClCompile Include="..\src\common\ComponentSteering.cpp" />
+    <ClCompile Include="..\src\common\ComponentTargetAim.cpp" />
+    <ClCompile Include="..\src\common\ComponentTargetPath.cpp" />
+    <ClCompile Include="..\src\common\ComponentTargetPosition.cpp" />
+    <ClCompile Include="..\src\common\ComponentVision.cpp" />
+    <ClCompile Include="..\src\common\Connection.cpp" />
+    <ClCompile Include="..\src\common\DebugTools.cpp" />
+    <ClCompile Include="..\src\common\EntityMesh.cpp" />
+    <ClCompile Include="..\src\common\EventManager.cpp" />
+    <ClCompile Include="..\src\common\GameManager.cpp" />
+    <ClCompile Include="..\src\common\GameObject.cpp" />
+    <ClCompile Include="..\src\common\GameObjectManager.cpp" />
+    <ClCompile Include="..\src\common\GameSettings.cpp" />
+    <ClCompile Include="..\src\common\GUIManager.cpp" />
+    <ClCompile Include="..\src\common\GraphicsEngineIrrlicht.cpp" />
+    <ClCompile Include="..\src\common\GraphicsEngineTAG.cpp" />
+    <ClCompile Include="..\src\common\MaterialTerrain.cpp" />
+    <ClCompile Include="..\src\common\MinimapSprite.cpp" />
+    <ClCompile Include="..\src\common\Message.cpp" />
+    <ClCompile Include="..\src\common\ModelLoader.cpp" />
+    <ClCompile Include="..\src\common\NetworkEngine.cpp" />
+    <ClCompile Include="..\src\common\NodeAS.cpp" />
+    <ClCompile Include="..\src\common\Path.cpp" />
+    <ClCompile Include="..\src\common\PhysicsManager.cpp" />
+    <ClCompile Include="..\src\common\ProcessManager.cpp" />
+    <ClCompile Include="..\src\common\ReplicaManager.cpp" />
+    <ClCompile Include="..\src\common\ResourceManager.cpp" />
+    <ClCompile Include="..\src\common\ResourceMaterial.cpp" />
+    <ClCompile Include="..\src\common\MaterialShield.cpp" />
+    <ClCompile Include="..\src\common\ResourceMesh.cpp" />
+    <ClCompile Include="..\src\common\ResourceTexture.cpp" />
+    <ClCompile Include="..\src\common\SceneManager.cpp" />
+    <ClCompile Include="..\src\common\SceneNode.cpp" />
+    <ClCompile Include="..\src\common\ServerBrowser.cpp" />
+    <ClCompile Include="..\src\common\Shader.cpp" />
+    <ClCompile Include="..\src\common\ShaderProgramTAG.cpp" />
+    <ClCompile Include="..\src\common\SkillBomb.cpp" />
+    <ClCompile Include="..\src\common\SkillHeal.cpp" />
+    <ClCompile Include="..\src\common\SkillMine.cpp" />
+    <ClCompile Include="..\src\common\SkillMultipleShot.cpp" />
+    <ClCompile Include="..\src\common\SkillTargetHeal.cpp" />
+    <ClCompile Include="..\src\common\SkillTargetProjectile.cpp" />
+    <ClCompile Include="..\src\common\SkillTurret.cpp" />
+    <ClCompile Include="..\src\common\SkillWall.cpp" />
+    <ClCompile Include="..\src\common\Skybox.cpp" />
+    <ClCompile Include="..\src\common\State.cpp" />
+    <ClCompile Include="..\src\common\StateClientLobby.cpp" />
+    <ClCompile Include="..\src\common\StateGameOver.cpp" />
+    <ClCompile Include="..\src\common\StateMenuCredits.cpp" />
+    <ClCompile Include="..\src\common\StateSelectCharacter.cpp" />
+    <ClCompile Include="..\src\common\StateServerInGame.cpp" />
+    <ClCompile Include="..\src\common\StateInGame.cpp" />
+    <ClCompile Include="..\src\common\StateIntro.cpp" />
+    <ClCompile Include="..\src\common\StateMenuCreateGame.cpp" />
+    <ClCompile Include="..\src\common\StateMenuOptions.cpp" />
+    <ClCompile Include="..\src\common\StateMenuTests.cpp" />
+    <ClCompile Include="..\src\common\StateServerLobby.cpp" />
+    <ClCompile Include="..\src\common\StateMenuMain.cpp" />
+    <ClCompile Include="..\src\common\StateServerBrowser.cpp" />
+    <ClCompile Include="..\src\common\tests\StateBenchmark.cpp" />
+    <ClCompile Include="..\src\common\tests\StateClientInGame.cpp" />
+    <ClCompile Include="..\src\common\tests\StateTestAIFury.cpp" />
+    <ClCompile Include="..\src\common\tests\StateTestClient.cpp" />
+    <ClCompile Include="..\src\common\tests\StateTestEnemyShot.cpp" />
+    <ClCompile Include="..\src\common\tests\StateTestGameObject.cpp" />
+    <ClCompile Include="..\src\common\tests\StateTestOnline.cpp" />
+    <ClCompile Include="..\src\common\tests\StateTestPathfinding.cpp" />
+    <ClCompile Include="..\src\common\tests\StateTestServer.cpp" />
+    <ClCompile Include="..\src\common\tests\StateTestWaves.cpp" />
+    <ClCompile Include="..\src\common\EntityTransform.cpp" />
+    <ClCompile Include="..\src\common\tiny_obj_loader.cc" />
+    <ClCompile Include="..\src\common\Vector3d.cpp" />
+    <ClInclude Include="..\src\common\AIEngine.h" />
+    <ClInclude Include="..\src\common\AudioManager.h" />
+    <ClInclude Include="..\src\common\ComponentAIBomber.h" />
+    <ClInclude Include="..\src\common\ComponentAIDefender.h" />
+    <ClInclude Include="..\src\common\ComponentAnimationArea.h" />
+    <ClInclude Include="..\src\common\ComponentConstruction.h" />
+    <ClInclude Include="..\src\common\ComponentCreateDebris.h" />
+    <ClInclude Include="..\src\common\ComponentCreatingWall.h" />
+    <ClInclude Include="..\src\common\ComponentDebris.h" />
+    <ClInclude Include="..\src\common\ComponentEndGame.h" />
+    <ClInclude Include="..\src\common\ComponentGraphicsShield.h" />
+    <ClInclude Include="..\src\common\ComponentGraphicsShadow.h" />
+    <ClInclude Include="..\src\common\ComponentRemoteMessage.h" />
+    <ClInclude Include="..\src\common\ComponentEnergyWall.h" />
+    <ClInclude Include="..\src\common\ComponentRepairSystem.h" />
+    <ClInclude Include="..\src\common\ComponentSkill.h" />
+    <ClInclude Include="..\src\common\ComponentSound.h" />
+    <ClInclude Include="..\src\common\ComponentWallConstruction.h" />
+    <ClInclude Include="..\src\common\CScreenQuadSceneNode.h" />
+    <ClInclude Include="..\src\common\EntityLight.h" />
+    <ClInclude Include="..\src\common\ComponentGraphicsStatics.h" />
+    <ClInclude Include="..\src\common\FXEngine.h" />
+    <ClInclude Include="..\src\common\FXEngineIrrlicht.h" />
+    <ClInclude Include="..\src\common\FXEngineTAG.h" />
+    <ClInclude Include="..\src\common\GUIButton.h" />
+    <ClInclude Include="..\src\common\GUICheckbox.h" />
+    <ClInclude Include="..\src\common\GUIElement.h" />
+    <ClInclude Include="..\src\common\GUISprite.h" />
+    <ClInclude Include="..\src\common\GUITable.h" />
+    <ClInclude Include="..\src\common\GUIText.h" />
+    <ClInclude Include="..\src\common\MapManager.h" />
+    <ClInclude Include="..\src\common\AIFlocking.h" />
+    <ClInclude Include="..\src\common\Clock.h" />
+    <ClInclude Include="..\src\common\CollisionManager.h" />
+    <ClInclude Include="..\src\common\Component.h" />
+    <ClInclude Include="..\src\common\ComponentAIEnemy.h" />
+    <ClInclude Include="..\src\common\ComponentAIEnemyDumb.h" />
+    <ClInclude Include="..\src\common\ComponentAIMine.h" />
+    <ClInclude Include="..\src\common\ComponentAutoDestroy.h" />
+    <ClInclude Include="..\src\common\ComponentBehaviour.h" />
+    <ClInclude Include="..\src\common\ComponentBulletLauncher.h" />
+    <ClInclude Include="..\src\common\ComponentDebugPathfinding.h" />
+    <ClInclude Include="..\src\common\ComponentAIFury.h" />
+    <ClInclude Include="..\src\common\ComponentGiveExp.h" />
+    <ClInclude Include="..\src\common\ComponentHUD.h" />
+    <ClInclude Include="..\src\common\ComponentInputCamera.h" />
+    <ClInclude Include="..\src\common\ComponentInputObstacle.h" />
+    <ClInclude Include="..\src\common\ComponentInputTarget.h" />
+    <ClInclude Include="..\src\common\ComponentAITurret.h" />
+    <ClInclude Include="..\src\common\ComponentCamera.h" />
+    <ClInclude Include="..\src\common\ComponentCollider.h" />
+    <ClInclude Include="..\src\common\ComponentDebugGameObject.h" />
+    <ClInclude Include="..\src\common\ComponentAIProjectile.h" />
+    <ClInclude Include="..\src\common\ComponentExplosionDamage.h" />
+    <ClInclude Include="..\src\common\ComponentGraphics.h" />
+    <ClInclude Include="..\src\common\ComponentHealth.h" />
+    <ClInclude Include="..\src\common\ComponentInput.h" />
+    <ClInclude Include="..\src\common\ComponentInventory.h" />
+    <ClInclude Include="..\src\common\ComponentJade.h" />
+    <ClInclude Include="..\src\common\ComponentLevelExp.h" />
+    <ClInclude Include="..\src\common\ComponentMinesGenerator.h" />
+    <ClInclude Include="..\src\common\ComponentMiniMap.h" />
+    <ClInclude Include="..\src\common\ComponentMovement.h" />
+    <ClInclude Include="..\src\common\ComponentPathfinder.h" />
+    <ClInclude Include="..\src\common\ComponentProjectileLauncher.h" />
+    <ClInclude Include="..\src\common\ComponentRandomMovement.h" />
+    <ClInclude Include="..\src\common\ComponentMovementInterpolation.h" />
+    <ClInclude Include="..\src\common\ComponentRay.h" />
+    <ClInclude Include="..\src\common\ComponentSteering.h" />
+    <ClInclude Include="..\src\common\ComponentTargetAim.h" />
+    <ClInclude Include="..\src\common\ComponentTargetPath.h" />
+    <ClInclude Include="..\src\common\ComponentTargetPosition.h" />
+    <ClInclude Include="..\src\common\ComponentVision.h" />
+    <ClInclude Include="..\src\common\Connection.h" />
+    <ClInclude Include="..\src\common\DebugTools.h" />
+    <ClInclude Include="..\src\common\EntityCamera.h" />
+    <ClInclude Include="..\src\common\EntityMesh.h" />
+    <ClInclude Include="..\src\common\EventManager.h" />
+    <ClInclude Include="..\src\common\GameManager.h" />
+    <ClInclude Include="..\src\common\GameObject.h" />
+    <ClInclude Include="..\src\common\GameObjectManager.h" />
+    <ClInclude Include="..\src\common\GameObjectPtr.h" />
+    <ClInclude Include="..\src\common\GameSettings.h" />
+    <ClInclude Include="..\src\common\GraphicsEngine.h" />
+    <ClInclude Include="..\src\common\GUIManager.h" />
+    <ClInclude Include="..\src\common\GraphicsEngineIrrlicht.h" />
+    <ClInclude Include="..\src\common\GraphicsEngineTAG.h" />
+    <ClInclude Include="..\src\common\MaterialTerrain.h" />
+    <ClInclude Include="..\src\common\MinimapSprite.h" />
+    <ClInclude Include="..\src\common\ID.h" />
+    <ClInclude Include="..\src\common\KeyCode.h" />
+    <ClInclude Include="..\src\common\Math.h" />
+    <ClInclude Include="..\src\common\Matrix.h" />
+    <ClInclude Include="..\src\common\Matrix4.h" />
+    <ClInclude Include="..\src\common\Message.h" />
+    <ClInclude Include="..\src\common\ModelLoader.h" />
+    <ClInclude Include="..\src\common\MaterialShield.h" />
+    <ClInclude Include="..\src\common\ShieldShaderCallBack.h" />
+    <ClInclude Include="..\src\common\NetworkEngine.h" />
+    <ClInclude Include="..\src\common\NetworkMessages.h" />
+    <ClInclude Include="..\src\common\NodeAS.h" />
+    <ClInclude Include="..\src\common\NodeCamera.h" />
+    <ClInclude Include="..\src\common\NodeCameraIrrlicht.h" />
+    <ClInclude Include="..\src\common\NodeCameraTAG.h" />
+    <ClInclude Include="..\src\common\NodeMesh.h" />
+    <ClInclude Include="..\src\common\NodeMeshIrrlicht.h" />
+    <ClInclude Include="..\src\common\NodeMeshTAG.h" />
+    <ClInclude Include="..\src\common\NodeSound.h" />
+    <ClInclude Include="..\src\common\NodeText.h" />
+    <ClInclude Include="..\src\common\NodeTextIrrlicht.h" />
+    <ClInclude Include="..\src\common\NodeTextTAG.h" />
+    <ClInclude Include="..\src\common\Path.h" />
+    <ClInclude Include="..\src\common\PhysicsManager.h" />
+    <ClInclude Include="..\src\common\ProcessManager.h" />
+    <ClInclude Include="..\src\common\ReplicaManager.h" />
+    <ClInclude Include="..\src\common\Resource.h" />
+    <ClInclude Include="..\src\common\ResourceManager.h" />
+    <ClInclude Include="..\src\common\ResourceMaterial.h" />
+    <ClInclude Include="..\src\common\ResourceMesh.h" />
+    <ClInclude Include="..\src\common\ResourceSoundBuffer.h" />
+    <ClInclude Include="..\src\common\ResourceTexture.h" />
+    <ClInclude Include="..\src\common\SceneManager.h" />
+    <ClInclude Include="..\src\common\SceneNode.h" />
+    <ClInclude Include="..\src\common\ServerBrowser.h" />
+    <ClInclude Include="..\src\common\Shader.h" />
+    <ClInclude Include="..\src\common\ShaderProgramTAG.h" />
+    <ClInclude Include="..\src\common\Skill.h" />
+    <ClInclude Include="..\src\common\SkillBomb.h" />
+    <ClInclude Include="..\src\common\SkillHeal.h" />
+    <ClInclude Include="..\src\common\SkillMine.h" />
+    <ClInclude Include="..\src\common\SkillMultipleShot.h" />
+    <ClInclude Include="..\src\common\SkillTargetHeal.h" />
+    <ClInclude Include="..\src\common\SkillTargetProjectile.h" />
+    <ClInclude Include="..\src\common\SkillTurret.h" />
+    <ClInclude Include="..\src\common\SkillWall.h" />
+    <ClInclude Include="..\src\common\Skybox.h" />
+    <ClInclude Include="..\src\common\StateClientLobby.h" />
+    <ClInclude Include="..\src\common\StateGameOver.h" />
+    <ClInclude Include="..\src\common\StateMenuCredits.h" />
+    <ClInclude Include="..\src\common\StateSelectCharacter.h" />
+    <ClInclude Include="..\src\common\StateServerInGame.h" />
+    <ClInclude Include="..\src\common\StateInGame.h" />
+    <ClInclude Include="..\src\common\StateIntro.h" />
+    <ClInclude Include="..\src\common\StateMenuCreateGame.h" />
+    <ClInclude Include="..\src\common\StateMenuOptions.h" />
+    <ClInclude Include="..\src\common\StateMenuTests.h" />
+    <ClInclude Include="..\src\common\StateServerLobby.h" />
+    <ClInclude Include="..\src\common\StateMenuMain.h" />
+    <ClInclude Include="..\src\common\StateServerBrowser.h" />
+    <ClInclude Include="..\src\common\Entity.h" />
+    <ClInclude Include="..\src\common\TerrainShaderCallBack.h" />
+    <ClInclude Include="..\src\common\tests\StateBenchmark.h" />
+    <ClInclude Include="..\src\common\tests\StateClientInGame.h" />
+    <ClInclude Include="..\src\common\tests\StateTestAIFury.h" />
+    <ClInclude Include="..\src\common\tests\StateTestClient.h" />
+    <ClInclude Include="..\src\common\tests\StateTestEnemyShot.h" />
+    <ClInclude Include="..\src\common\tests\StateTestGameObject.h" />
+    <ClInclude Include="..\src\common\tests\StateTestOnline.h" />
+    <ClInclude Include="..\src\common\tests\StateTestPathfinding.h" />
+    <ClInclude Include="..\src\common\tests\StateTestServer.h" />
+    <ClInclude Include="..\src\common\tests\StateTestWaves.h" />
+    <ClInclude Include="..\src\common\EntityTransform.h" />
+    <ClInclude Include="..\src\common\tiny_obj_loader.h" />
+    <ClInclude Include="..\src\common\Vector2d.h" />
+    <ClInclude Include="..\src\common\Vector3d.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\common\State.h" />
+    <ClCompile Include="..\src\common\Math.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

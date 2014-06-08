@@ -1,0 +1,12 @@
+# Blender MTL File: 'base_LP.blend'
+# Material Count: 1
+
+newmtl wire_115115115.000
+Ns 100
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd base.png

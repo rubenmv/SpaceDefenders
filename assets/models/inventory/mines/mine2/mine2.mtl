@@ -1,0 +1,12 @@
+# Blender MTL File: 'turret 2 y mina.blend'
+# Material Count: 1
+
+newmtl wire_145028177.002
+Ns 98.039216
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd mine2.png

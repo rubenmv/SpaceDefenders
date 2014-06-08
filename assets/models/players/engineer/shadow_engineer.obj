@@ -1,0 +1,15 @@
+# Blender v2.69 (sub 0) OBJ File: 'ingeniero_retocada.blend'
+# www.blender.org
+mtllib shadow_engineer.mtl
+o Plane
+v -6.260314 -3.602785 6.269759
+v -6.260313 -3.602785 -6.217177
+v 6.226622 -3.602785 6.269760
+v 6.226623 -3.602785 -6.217176
+vt 0.000000 1.000000
+vt 0.000000 0.000000
+vt 1.000000 0.000000
+vt 1.000000 1.000000
+usemtl Material
+s off
+f 2/1 1/2 3/3 4/4
