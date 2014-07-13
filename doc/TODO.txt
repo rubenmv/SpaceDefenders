@@ -1,0 +1,1 @@
+- Algunas opciones no deberían hacer reiniciar el juego, como cambiar resolucion o musica
