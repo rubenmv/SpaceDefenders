@@ -1,1 +1,2 @@
 - Algunas opciones no deberían hacer reiniciar el juego, como cambiar resolucion o musica
+- Hacer clipping con la camara, no con el rango del jugador, si esto elimina la gracia del clipping cuando la camara esta muy baja, entonces inventar alguna otra cosa.
