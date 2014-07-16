@@ -32,10 +32,10 @@ TODO
 License
 -------
 
-SFML... 
-tiny_obj_loader... 
-The rest of the code is licensed under the GNU GPL v3 (http://www.gnu.org/licenses/gpl-3.0.txt) 
-Assets are licensed under the Creative Commons Attribute Share-Alike 4.0 International (http://creativecommons.org/licenses/by-sa/4.0/)
+SFML...<br/>
+tiny_obj_loader...<br/>
+The rest of the code is licensed under the GNU GPL v3 (http://www.gnu.org/licenses/gpl-3.0.txt)<br/>
+Assets are licensed under the Creative Commons Attribute Share-Alike 4.0 International (http://creativecommons.org/licenses/by-sa/4.0/)<br/>
 
 Usage
 -----
