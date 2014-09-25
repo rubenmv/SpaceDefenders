@@ -1,0 +1,10 @@
+All 3rd party libraries used in this project:
+* SFML (http://sfml-dev.org/license.php)
+* tiny_obj_loader (http://syoyo.github.io/tinyobjloader)
+* RakNet (https://github.com/OculusVR/RakNet)
+* Bullet Physics (http://bulletphysics.org/mediawiki-1.5.8/index.php/LICENSE)
+* IrrLicht Engine (http://irrlicht.sourceforge.net/license/)
+
+The rest of the code is licensed under the GNU GPL v3 (http://www.gnu.org/licenses/gpl-3.0.txt)
+
+Assets are licensed under the Creative Commons Attribute Share-Alike 4.0 International (http://creativecommons.org/licenses/by-sa/4.0/)
