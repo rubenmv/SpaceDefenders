@@ -51,6 +51,9 @@ server.dat
 *.log
 *.scc
 
+# Allow installer
+!setup.exe
+
 # Visual C++ cache files
 ipch/
 *.aps
