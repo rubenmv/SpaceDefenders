@@ -52,7 +52,7 @@ server.dat
 *.scc
 
 # Allow installer
-!setup.exe
+!SpaceDefendersInstaller.exe
 
 # Visual C++ cache files
 ipch/
