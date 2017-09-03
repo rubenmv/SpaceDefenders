@@ -31,10 +31,10 @@ This project features:
 
 Screenshots
 -----------
-![screenshot main menu](/doc/images/screenshots/SD_Client 2014-06-02 19-34-32-74.jpg)
+![screenshot main menu](/doc/images/screenshots/SD_Client_2014-06-02_19-34-32-74.jpg)
 ![screenshot multiplayer](/doc/images/screenshots/multijugador.jpg)
-![screenshot player selection](/doc/images/screenshots/SD_Client 2014-06-02 19-34-36-88.jpg)
-![screenshot single player](/doc/images/screenshots/SD_Client 2014-06-02 19-36-51-12.jpg)
+![screenshot player selection](/doc/images/screenshots/SD_Client_2014-06-02_19-34-36-88.jpg)
+![screenshot single player](/doc/images/screenshots/SD_Client_2014-06-02_19-36-51-12.jpg)
 
 Platforms
 ---------
